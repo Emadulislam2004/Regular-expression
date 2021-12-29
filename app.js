@@ -5,6 +5,7 @@ let email       = 'akash@emadulislam.com';
 let userName    = "akash1";
 let password    = 'A406699A';
 let zipCode     = '3450';
+let number      = +8801827816062;
 
 
 // validation
@@ -14,6 +15,7 @@ let userNamePattern    = /^[a-z]{5,8}[0-9]{1}$/;
 let PassPattern        = /^.{8,10}$/;
 let agePattern         = /^[0-9]{2}$/;
 let zipCodePattern     = /^[0-9]{4}$/;
+let numPattern         = /^(01|8801|\+8801)[0-9]{9}$/;
 
 
 
@@ -23,6 +25,7 @@ let userNameValidation   = userNamePattern.test(userName);
 let emailValidation      = emailPattern.test(email);
 let ageValidation        = agePattern.test(age);
 let zipCodeValidation    = zipCodePattern.test(zipCode);
+let numberValidation     = numPattern.test(number)
 
 
 
@@ -30,7 +33,7 @@ let zipCodeValidation    = zipCodePattern.test(zipCode);
 
 
 try{
-    if(nameValidation == false ||emailValidation ==false|| passValidation == false || userNameValidation == false||ageValidation==false||zipCodeValidation==false){
+    if(numberValidation == false||nameValidation == false ||emailValidation ==false|| passValidation == false || userNameValidation == false||ageValidation==false||zipCodeValidation==false){
 
         throw 'Please input valid value '
         
@@ -44,6 +47,7 @@ try{
         Your User    : ${userName}
         Your Pass    : ${password}
         Your Zip     : ${zipCode}
+        Your Number  : ${number}
         
         
         `)
